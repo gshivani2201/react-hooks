@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 
-export class ClassEffectCO extends Component {
+class ClassEffectCO extends Component {
 
     constructor(props) {
       super(props)
     
       this.state = {
-         count: 0
+         count: 0,
+         name: ''
       }
     }
 
@@ -14,16 +15,32 @@ export class ClassEffectCO extends Component {
         document.title = `Clicked ${this.state.count} times`
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps, prevState) {
+      if (prevState !== this.state.count) {
+        console.log('Updating document title')
         document.title = `Clicked ${this.state.count} times`
+      }
     }
 
   render() {
-    return <button onClick={() => {
-        this.setState({count: this.state.count + 1})
-        }}>
-        Clicked {this.state.count} times
+    return (
+      <div>
+        <input
+          type="text"
+          value={this.state.name}
+          onChange={(e) => {
+            this.setState({ name: e.target.value });
+          }}
+        />
+        <button
+          onClick={() => {
+            this.setState({ count: this.state.count + 1 });
+          }}
+        >
+          Clicked {this.state.count} times
         </button>
+      </div>
+    );
   }
 }
 
