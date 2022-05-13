@@ -1,10 +1,18 @@
 import './App.css';
-import DataFetching from './components/DataFetching';
+import React from 'react'
+import CompC from './components/CompC';
+
+export const UserContext = React.createContext()
+export const ChannelContext = React.createContext()
 
 function App() {
   return (
     <div className="App">
-      <DataFetching />
+      <UserContext.Provider value={'Shivani'}>
+        <ChannelContext.Provider value={'Shivuu ka channel'}>
+          <CompC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
