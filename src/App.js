@@ -1,11 +1,11 @@
 import './App.css';
-import CustomCounterOne from './components/CustomCounterOne';
+import UserForm from './components/UserForm';
 
 function App() {
 
   return (
       <div className="App">
-        <CustomCounterOne />
+        <UserForm />
       </div>
   );
 }
