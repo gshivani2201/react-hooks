@@ -1,11 +1,11 @@
 import './App.css';
-import DocTitle from './components/DocTitle';
+import CustomCounterOne from './components/CustomCounterOne';
 
 function App() {
 
   return (
       <div className="App">
-        <DocTitle />
+        <CustomCounterOne />
       </div>
   );
 }
