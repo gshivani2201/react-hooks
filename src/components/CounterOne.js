@@ -1,8 +1,6 @@
 import React, {useReducer} from 'react'
 
-function CounterOne() {
-
-    const initialState = 0
+const initialState = 0
     const reducer = (state, action) => {
         switch (action) {
             case 'increment':
@@ -15,6 +13,8 @@ function CounterOne() {
                 return state
         }
     }
+
+function CounterOne() {
 
     const [count, dispatch] = useReducer (reducer, initialState)
 
