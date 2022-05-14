@@ -1,11 +1,11 @@
 import './App.css';
-import UserefCounter from './components/UserefCounter';
+import DocTitle from './components/DocTitle';
 
 function App() {
 
   return (
       <div className="App">
-        <UserefCounter />
+        <DocTitle />
       </div>
   );
 }
