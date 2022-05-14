@@ -1,11 +1,11 @@
 import './App.css';
-import FocusInput from './components/FocusInput';
+import UserefCounter from './components/UserefCounter';
 
 function App() {
 
   return (
       <div className="App">
-        <FocusInput />
+        <UserefCounter />
       </div>
   );
 }
