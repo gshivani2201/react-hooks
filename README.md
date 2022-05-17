@@ -1,4 +1,4 @@
-# Pratice app to learn React Hooks
+# Practice app to learn React Hooks
 
 <!-- # Getting Started with Create React App
 
